@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quintessential', cursive
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-brand {
+    font-size: 45px;
+}
+
+
+
+.navbar-start {
+    font-size: 30px;
+    padding-left: 20px;
+}
