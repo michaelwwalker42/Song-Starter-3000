@@ -17,8 +17,13 @@
 
 .navbar-brand {
     font-size: 45px;
+    text-align: center;
 }
 
+.navbar-menu {
+    background-color: black;
+    color: white;
+}
 
 .navbar-start {
     font-size: 30px;
@@ -34,4 +39,11 @@
 }
 .center {
     text-align: center;
+}
+
+
+@media screen and (max-width: 500px) {
+    .navbar {
+        margin-left: 0px;
+    }
 }
