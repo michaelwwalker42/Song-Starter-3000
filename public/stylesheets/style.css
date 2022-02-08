@@ -20,8 +20,18 @@
 }
 
 
-
 .navbar-start {
     font-size: 30px;
     padding-left: 20px;
+}
+
+.column > * {
+    padding-bottom: 15px;
+}
+
+.box {
+    min-height: 30vh;
+}
+.center {
+    text-align: center;
 }
