@@ -32,7 +32,9 @@
 }
 
 .box {
+    margin-top: 10%;
     min-height: 30vh;
+    margin-bottom: 15px;
 }
 .center {
     text-align: center;

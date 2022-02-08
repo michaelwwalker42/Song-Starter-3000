@@ -7,7 +7,7 @@ let sequelize;
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
-    sequelize = new Sequelize(process.env.DB_NAME, 'root', 'dani7392385', {
+    sequelize = new Sequelize('song_starter_3000', 'root', 'dani7392385', {
     dialect: 'mysql',
     port: 3306
   });
