@@ -1,8 +1,6 @@
 const seedUsers = require('./user-seeds');
 const seedCategories = require('./category-seeds');
-const seedKeys = require('./key-seeds');
 const seedScales = require('./scale-seeds');
-
 
 const sequelize = require('../config/connection');
 
@@ -14,9 +12,6 @@ const seedAll = async () => {
   console.log('--------------');
 
   await seedCategories();
-  console.log('--------------');
-  
-  await seedKeys();
   console.log('--------------');
 
   await seedScales();

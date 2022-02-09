@@ -28,12 +28,9 @@ Scale.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    key_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'key',
-        key: 'id'
-      }
+    tonic: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   },
   {
@@ -41,7 +38,7 @@ Scale.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'key',
+    modelName: 'Scale',
   }
 );
 
