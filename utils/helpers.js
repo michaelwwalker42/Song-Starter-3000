@@ -14,7 +14,7 @@ function randomProgression(chordsArray, progressionLength) {
     '%cNew Chord Progression: ' + `%c${newProgression}`,
     'font-weight: bold', 'color:blue'
   );
-  return (newProgression);
+  return newProgression;
 };
 
 // example:
