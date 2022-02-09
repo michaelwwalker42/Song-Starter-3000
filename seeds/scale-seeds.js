@@ -95,91 +95,91 @@ const scaleData = [
     scale_name: 'A Minor',
     notes: 'A,B,C,D,E,F,G',
     chords: 'Am,Bdim,C,Dm,Em,F,G',
-    tonic: 'A'
+    tonic: 'Am'
   },
   {
     scale_name: 'E Phrygian',
     notes: 'E,F,G,A,B,C,D',
     chords: 'Em,F,G,Am,Bdim,C,Dm',
-    tonic: 'E'
+    tonic: 'Em'
   },
   {
     scale_name: 'B Phrygian',
     notes: 'B,C,D,E,F#,G,A',
     chords: 'Bm,C,D,Em,F#dim,G,Am',
-    tonic: 'B'
+    tonic: 'Bm'
   },
   {
     scale_name: 'F# Minor',
     notes: 'F#m,G#dim,A,Bm,C#m,D,E',
     chords: 'F#,G#,A,B,C#,D,E',
-    tonic: 'F#'
+    tonic: 'F#m'
   },
   {
     scale_name: 'C# Minor',
     notes: 'C#,D#,E,F#,G#,A,B',
     chords: 'C#m,D#dim,E,F#m,G#m,A,B',
-    tonic: 'C#'
+    tonic: 'C#m'
   },
   {
     scale_name: 'G# Minor',
     notes: 'G#,A#,B,C#,D#,E,F#',
     chords: 'G#m,A#dim,B,C#m,D#m,E,F#',
-    tonic: 'G#'
+    tonic: 'G#m'
   },
   {
     scale_name: 'D# Minor',
     notes: 'D#,E#,F#,G#,A#,B,C#',
     chords: 'D#m,E#dim,F#,G#m,A#m,B,C#',
-    tonic: 'D#'
+    tonic: 'D#m'
   },
   {
     scale_name: 'A# Minor',
     notes: 'A#,B,C#,D#,E#,F#,G#',
     chords: 'A#m,Bdim,C#,D#m,E#m,F#,G#',
-    tonic: 'A#'
+    tonic: 'A#m'
   },
   {
     scale_name: 'D Dorian',
     notes: 'D,E,F,G,A,B,C',
     chords: 'Dm,Em,F,G,Am,Bdim,C',
-    tonic: 'D'
+    tonic: 'Dm'
   },
   {
     scale_name: 'G Dorian',
     notes: 'G,A,Bb,C,D,E,F',
     chords: 'Gm,Am,Bb,C,Dm,Edim,F',
-    tonic: 'G'
+    tonic: 'Gm'
   },
   {
     scale_name: 'C Harmonic Minor',
     notes: 'C,D,Eb,F,G,Ab,B',
     chords: 'Cm,Ddim,Ebaug,Fm,G,Ab,Bdim',
-    tonic: 'C'
+    tonic: 'Cm'
   },
   {
     scale_name: 'F Harmonic Minor',
     notes: 'F,G,Ab,Bb,C,Db,E',
     chords: 'Fm,Gdim,Abaug,Bm,C,Db,Edim',
-    tonic: 'F'
+    tonic: 'Fm'
   }, 
   {
     scale_name: 'Bb Minor',
     notes: 'Bb,C,Db,Eb,F,Gb,Ab',
     chords: 'Bbm,Cdim,Db,Ebm,Fm,Gb,Ab',
-    tonic: 'Bb'
+    tonic: 'Bbm'
   },
   {
     scale_name: 'Eb Minor',
     notes: 'Eb,F,Gb,Ab,Bb,Cb,Db',
     chords: 'Ebm,Fdim,Gb,Abm,Bbm,Cb,Db',
-    tonic: 'Eb'
+    tonic: 'Ebm'
   },
   {
     scale_name: 'Ab Minor',
     notes: 'Ab,Bb,Cb,Db,Eb,Fb,Gb',
     chords: 'Abm,Bbdim,Cb,Dbm,Ebm,Fb,Gb',
-    tonic: 'Ab'
+    tonic: 'Abm'
   }
 ];
 
