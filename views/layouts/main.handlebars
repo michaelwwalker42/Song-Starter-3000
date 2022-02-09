@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>project 2</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+    <link href="//db.onlinewebfonts.com/c/8cdbb48678e4418f22a2f507c2b975bd?family=Blanka" rel="stylesheet" type="text/css"/>
+    <link href="//db.onlinewebfonts.com/c/ab100f102474a07070d5d4c913c82d37?family=LegacySansEF" rel="stylesheet" type="text/css"/>
   <link rel="stylesheet" href="/stylesheets/style.css">
 
 </head>
@@ -15,42 +16,31 @@
         <div class="navbar-brand">
             <a class="navbar-item" href="/">Song Starter <br>3000</a>
         </div>
-
-        <div id="nav-options" class="navbar-menu is-active">
-            <div class="navbar-start">
-                {{#if loggedIn}}
-                <a class="navbar-item" href="/profile">Profile</a>
-                {{/if}}
-            </div>
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="buttons">
-                        {{#if loggedIn}}
-                        <a class="logout button is-light">Logout</a>
-                        {{else}}
-                        <a class="login button is-light" href="/login">
-                            <strong>Login</strong>
-                        </a>
-                        {{/if}}
-                    </div>
-                </div>
-            </div>
-        </div>
     </nav>
+
+    <hero>
+        <div id="profile-logout" class="">
+            {{#if loggedIn}}
+            <a id="profile" class="is-size-4" href="/profile">Profile</a>
+             <a id="logout" class="is-size-4 is-light">Logout</a>
+            {{/if}}
+        </div>
+    </hero>
+  
     <section>
         {{{body}}}
     </section>
 
-    <footer class="center">
-        Thanks for visitng! 
+    
+
+    <footer class="footer">
+        <div class="center content"> Thanks for visitng! </div>
     </footer>
 
 
 
     {{#if loggedIn}}
-    <script src="/javascript/logout"></script> 
-    {{else}} 
-    <script src="/javascript/login"></script> 
+    <script src="/javascript/logout"></script> +
     {{/if}}
 
     
