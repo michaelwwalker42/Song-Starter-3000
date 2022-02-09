@@ -2,12 +2,14 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Quintessential', cursive
+    font-family: 'Blanka';
 }
 
 .navbar {
     background-color: black;
     color: white;
+    font-size: 45px;
+    text-align: center;
 }
 
 .navbar a {
@@ -15,19 +17,14 @@
     color: white;
 }
 
-.navbar-brand {
-    font-size: 45px;
-    text-align: center;
+#profile, #logout {
+    color: black;
+    text-decoration: none; 
+    margin: 10px;
 }
 
-.navbar-menu {
-    background-color: black;
-    color: white;
-}
-
-.navbar-start {
-    font-size: 30px;
-    padding-left: 20px;
+.main-pg h1 {
+    font-family: 'LegacySansEF';
 }
 
 .column > * {
@@ -35,7 +32,9 @@
 }
 
 .box {
+    margin-top: 10%;
     min-height: 30vh;
+    margin-bottom: 15px;
 }
 .center {
     text-align: center;
