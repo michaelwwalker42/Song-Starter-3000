@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch":"nodemon server.js",
+    "watch": "nodemon server.js",
     "test": "jest",
     "start": "node server.js",
     "seed": "node seeds/index.js"
@@ -26,11 +26,12 @@
     "express": "^4.17.2",
     "express-handlebars": "^6.0.2",
     "express-session": "^1.17.2",
+    "jest": "^27.5.1",
     "mysql2": "^2.3.3",
     "sequelize": "^6.15.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15",
-    "dotenv": "^16.0.0"
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
   }
 }
