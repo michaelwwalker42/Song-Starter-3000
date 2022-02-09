@@ -1,13 +1,18 @@
 const router = require('express').Router();
 
-// create user from sign up form
+// TODO create user from sign up form, create session variables
 router.post('/', (req, res) => {
 
 });
 
-// login to already existing account from login
+// TODO login to already existing account from login, creat session variables
 router.post('/login', (req, res) => {
-    
-})
+
+});
+
+// TODO logout route
+router.post('/logout', (req, res) => {
+
+});
 
 module.exports = router;
