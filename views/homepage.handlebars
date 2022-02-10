@@ -1,3 +1,5 @@
+
+{{#if loggedIn}}
 <section class="main-pg section is-medium">
     <div class="columns is-centered">
         <div class="column is-5">
@@ -11,7 +13,23 @@
         </div>
     </div>
     
+    {{else}}
+    <section class="main-pg section is-medium">
+    <div class="columns is-centered">
+        <div class="column is-5">
+            <h1 class="center is-size-3">Get Inspired! Click the button to generate a random chord progression.</h1>
+            <div class="box center level">
+                <p class="is-size-4 level-item">Chord will go here</p>
+            </div >
+            <div class="is-flex is-justify-content-center">
+                <a class="is-size-4 random-btn button is-dark is-hovered is-focused">Generate Music</a>
+            </div>
+        </div>
+    </div>
+
     <div class="login columns is-centered">
         <p class="column is-5 center">or <a href="/login">login/signup</a> for more music inspiration!</p>
     </div>
+    {{/if}}
+
 </section>

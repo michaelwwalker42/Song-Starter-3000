@@ -1,0 +1,104 @@
+<section class="mt-6">
+  <div class="mx-6 mb-6">
+    Randomly generate a chord progression with the options below
+  </div>
+  {{!-- drop down boxes to choose key for random chords --}}
+    <div class="columns mx-6 is-mobile is-centered">
+        <div class="column is-3">
+            <div class="secition is-medium">
+                <div class="mb-4">
+                    Select a number of chords
+                </div>
+                <div class="select">
+                <select>
+                    <option></option>
+                    <option>One</option>
+                    <option>Two</option>
+                    <option>Three</option>
+                    <option>Four</option>
+                    <option>Five</option>
+                    <option>Six</option>
+                    <option>Seven</option>
+                </select>
+                </div>
+            </div>
+        </div>
+        <div class="column is-2">
+            <div>
+                Choose a Key
+            </div>
+            <div class="select">
+            <select>
+                <option></option>
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+                <option>D</option>
+                <option>E</option>
+                <option>F</option>
+                <option>G</option>
+            </select>
+            </div>
+            <div class="select">
+            <select>
+                <option></option>
+                <option>#</option>
+                <option class="flat">b</option>
+            </select>
+            </div>
+        </div>
+        <div class="column is-4">
+            <div>
+                Choose pitch class
+            </div>
+            <div class="select">
+            <select>
+                <option></option>
+                <option>Major</option>
+                <option>Minor</option>
+                <option>Diatonic</option>
+            </select>
+            </div>
+        </div>
+        
+    </div>
+    {{!-- button to generate chords --}}
+    <div class="is-flex is-justify-content-center">
+        <a class="is-size-5 random-btn button is-dark is-hovered is-focused">Generate Music</a>
+    </div>
+    {{!-- display randomly generated chords loads as hidden until  --}}
+    <div class="hidden progression mx-6">
+        <div class="box mx-6">
+            <div class="columns is-mobile is-centered">
+                {{!-- generate the columns with the random chords in a js file --}}
+                {{!-- <div class="column center (is-math.floor(8/how many chords))">
+                    put chord here
+                </div> --}}
+                <div class="column center is-1">
+                   C
+                </div>
+                <div class="column center is-1">
+                   C
+                </div>
+                <div class="column center is-1">
+                   C
+                </div>
+                <div class="column center is-1">
+                   C
+                </div>
+                <div class="column center is-1">
+                   C
+                </div>
+                <div class="column center is-1">
+                   C
+                </div>
+                
+            </div>
+        </div>
+        {{!-- option to save --}}
+        <div class="is-flex is-justify-content-center">
+            <a class="is-size-5 save-btn button is-dark is-hovered is-focused">Save progression</a>
+        </div>
+    </div>
+    
+</section>

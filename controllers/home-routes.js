@@ -15,6 +15,7 @@ router.get('/', (req, res) => {
 
 // get login page
 router.get('/login', (req, res) => {
+    //need to redirect to homepage if already logged in
     res.render('login', {
         loggedIn: false
     })
@@ -22,15 +23,16 @@ router.get('/login', (req, res) => {
 
 //get signup page
 router.get('/signup', (req, res) => {
+    //need to redirect to homepage if already logged in
     res.render('signup', {
         loggedIn: false
     })
 })
 
 // go to profile ** with auth needed
-router.get('/profile', (req, res) => {
-    res.render('profile', {
-        loggedIn: true
+router.get('/random', (req, res) => {
+    res.render('random', {
+        loggedIn: false
     })
 })
 
