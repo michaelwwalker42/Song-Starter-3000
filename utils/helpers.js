@@ -5,6 +5,11 @@ function randomProgression(chordsArray, progressionLength) {
   // the second argument is an integer
   // for how long we want the new progression to be
 
+  // example:
+  // let chords = ['Am','Bmb75','C','Dm','Em','F','G'];
+  // randomProgression(chords, 3);
+  // should return something like ['Am','C','F'];
+
   // randomly sort the array
   const shuffledChords = chordsArray.sort(() => 0.5 - Math.random());
   // slice the array between index[0] and how long the progression should be
@@ -17,13 +22,21 @@ function randomProgression(chordsArray, progressionLength) {
   return newProgression;
 };
 
-// example:
-// let chords = ['Am','Bmb5','C','Dm','Em','F','G'];
-// randomProgression(chords, 3);
-// should return something like ['Am','C','F'];
 
 
-module.exports = randomProgression;
+
+function randomScale(scales) {
+  // this function will take an array of scales and return a random scale
+  const scale = scales[(Math.floor(Math.random() * scales.length))];
+  console.log(
+    '%cRandom Scale: ' + `%c${scale}`,
+    'font-weight: bold', 'color:blue'
+  );
+  return scale;
+};
+
+
+module.exports = { randomProgression, randomScale };
 
 
 
