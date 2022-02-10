@@ -9,16 +9,16 @@
                 <div class="mb-4">
                     Select a number of chords
                 </div>
-                <div class="select">
+                <div class="select select-number">
                 <select>
-                    <option></option>
-                    <option>One</option>
-                    <option>Two</option>
-                    <option>Three</option>
-                    <option>Four</option>
-                    <option>Five</option>
-                    <option>Six</option>
-                    <option>Seven</option>
+                    <option value=""></option>
+                    <option value="one">One</option>
+                    <option value="two">Two</option>
+                    <option value="three">Three</option>
+                    <option value="four">Four</option>
+                    <option value="five">Five</option>
+                    <option value="six">Six</option>
+                    <option value="seven">Seven</option>
                 </select>
                 </div>
             </div>
@@ -27,23 +27,23 @@
             <div>
                 Choose a Key
             </div>
-            <div class="select">
+            <div class="select select-key">
             <select>
-                <option></option>
-                <option>A</option>
-                <option>B</option>
-                <option>C</option>
-                <option>D</option>
-                <option>E</option>
-                <option>F</option>
-                <option>G</option>
+                <option value=""></option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="G">G</option>
             </select>
             </div>
-            <div class="select">
+            <div class="select select-keysharp">
             <select>
-                <option></option>
-                <option>#</option>
-                <option class="flat">b</option>
+                <option value="none"></option>
+                <option value="sharp">#</option>
+                <option value="flat" class="flat">b</option>
             </select>
             </div>
         </div>
@@ -51,12 +51,12 @@
             <div>
                 Choose pitch class
             </div>
-            <div class="select">
+            <div class="select select-class">
             <select>
-                <option></option>
-                <option>Major</option>
-                <option>Minor</option>
-                <option>Diatonic</option>
+                <option value=""></option>
+                <option value="major">Major</option>
+                <option value="minor">Minor</option>
+                <option value="diatonic">Diatonic</option>
             </select>
             </div>
         </div>
@@ -64,7 +64,7 @@
     </div>
     {{!-- button to generate chords --}}
     <div class="is-flex is-justify-content-center">
-        <a class="is-size-5 random-btn button is-dark is-hovered is-focused">Generate Music</a>
+        <a id="random-btn" class="is-size-5 button is-dark is-hovered is-focused">Generate Music</a>
     </div>
     {{!-- display randomly generated chords loads as hidden until  --}}
     <div class="display progression mx-6">
@@ -102,3 +102,5 @@
     </div>
     
 </section>
+
+<script src="/javascript/progressions.js"></script>
