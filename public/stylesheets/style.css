@@ -5,6 +5,23 @@
     font-family: 'Blanka';
 }
 
+.alt-font {
+    font-family: 'LegacySansEF';
+}
+
+.hidden {
+    display: none;
+}
+
+.displayed {
+    display: block;
+}
+
+.flat {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+}
 .navbar {
     background-color: black;
     color: white;
@@ -23,9 +40,6 @@
     margin: 10px;
 }
 
-.main-pg h1 {
-    font-family: 'LegacySansEF';
-}
 
 .column > * {
     padding-bottom: 15px;
@@ -36,6 +50,7 @@
     min-height: 30vh;
     margin-bottom: 15px;
 }
+
 .center {
     text-align: center;
 }

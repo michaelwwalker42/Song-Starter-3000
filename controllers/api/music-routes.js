@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-//todo route to find chords by key name
+//todo route to find chords by key name will be sent key
 router.get('/', (req, res) => {
     Scale.findAll({
         where: {
