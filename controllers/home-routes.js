@@ -5,7 +5,7 @@ const withAuth = require('../utils/auth');
 router.get('/', (req, res) => {
     //redirect to profile page if user is already signed in
     if(req.session.user_id) {
-        res.redirect('profile')
+        res.redirect('progression')
     } else {
         res.render('homepage', {
             loggedIn: true
@@ -15,9 +15,9 @@ router.get('/', (req, res) => {
 
 // get login page
 router.get('/login', (req, res) => {
-    //need to redirect to homepage if already logged in
-    res.render('login', {
-        loggedIn: false
+    // make if statment to redirect if logged in
+      res.render('login', {
+        loggedIn: true
     })
 });
 
@@ -25,20 +25,23 @@ router.get('/login', (req, res) => {
 router.get('/signup', (req, res) => {
     //need to redirect to homepage if already logged in
     res.render('signup', {
-        loggedIn: false
+        loggedIn: true
     })
 })
 
-// go to profile ** with auth needed
-router.get('/random', (req, res) => {
-    res.render('random', {
-        loggedIn: false
-    })
+// go to progression generator page ** with auth needed
+router.get('/progressions', (req, res) => {
+    res.render('progressions', {
+        loggedIn: true
+    });
 })
 
-//get favorites
-router.get('/favorites/id', withAuth, (req, res) => {
+//get favorites ** need to add withAuth
+router.get('/favorites', (req, res) => {
     // get all favorites where user_id is equal to req.params.id, this will also be session.user_id
+    res.render('favorites', {
+        loggedIn: true
+    });
 })
 
 module.exports = router;

@@ -15,7 +15,7 @@ async function loginFormHandler(event) {
       });
 
       if (response.ok) {
-          document.location.replace('/profile');
+          document.location.replace('/progressions');
       } else {
           alert(response.statusText)
       }
