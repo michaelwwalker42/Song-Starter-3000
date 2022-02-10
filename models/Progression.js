@@ -14,13 +14,16 @@ Progression.init(
       autoIncrement: true
     },
     progression_name: {
-      type: DataTypes.STRING,
-      chords: DataTypes.STRING
+      type: DataTypes.STRING
     },
-    scale_id: {
+    chords: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'scale',
+        model: 'user',
         key: 'id'
       }
     }
