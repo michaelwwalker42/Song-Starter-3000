@@ -1,4 +1,4 @@
-// import the Sequelize construcgtor from the library
+// import the Sequelize constructor from the library
 const Sequelize = require('sequelize');
 const path = require('path');
 
