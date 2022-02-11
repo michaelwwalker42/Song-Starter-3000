@@ -5,10 +5,10 @@ const withAuth = require('../utils/auth');
 router.get('/', (req, res) => {
     //redirect to profile page if user is already signed in
     if(req.session.user_id) {
-        res.redirect('progression')
+        res.redirect('/')
     } else {
         res.render('homepage', {
-            loggedIn: true
+            loggedIn: req.session.loggedIn
         })    
     }
 });
@@ -30,17 +30,17 @@ router.get('/signup', (req, res) => {
 })
 
 // go to progression generator page ** with auth needed
-router.get('/progressions', (req, res) => {
+router.get('/progressions', withAuth, (req, res) => {
     res.render('progressions', {
         loggedIn: true
     });
 })
 
 //get favorites ** need to add withAuth
-router.get('/favorites', (req, res) => {
+router.get('/favorites', withAuth, (req, res) => {
     // get all favorites where user_id is equal to req.params.id, this will also be session.user_id
     res.render('favorites', {
-        loggedIn: true
+        favorites
     });
 })
 

@@ -1,28 +1,23 @@
 <section>
+    {{#if favorites.length}}
     <div class="columns is-mobile ml-4 mt-6">
-        <div class="save-title column is-one-quarter">
-            <h1>Name</h1>
-            <ul>
-                <li>Name</li>
-                <li>Name</li>
-                <li>Name</li>
-                <li>Name</li>
-                <li>Name</li>
-                {{!-- dynamically generate list of titles with js file --}}
-            </ul>
-        </div>
-        <div class="save-chords column is-one-quarter">
-            <h2>Chord Progression</h2>
-            <ul>
-                <li>Chords</li>
-                <li>Chords</li>
-                <li>Chords</li>
-                <li>Chords</li>
-                <li>Chords</li>
-                {{!-- dynamically generate list of saved chords with js file --}}
-            </ul>
-        </div>
+            <div class="save-title column is-one-quarter">
+                <h1>Name</h1>
+            </div>
+            <div class="save-chords column is-one-quarter">
+                <h2>Chord Progression</h2>
+            </div>
     </div>
+    {{#each favorites as |favorite|}}
+    <div class="columns is-mobile ml-4 mt-1">
+            <div class="save-title column is-one-quarter">
+                <h2>{{favorite.progression_name}}</h1>
+            </div>
+            <div class="save-chords column is-one-quarter">
+                <h3>{{favorite.chords}}</h2>
+            </div>
+    </div>
+   {{/each}}
+   {{/if}}
 </section>
 
-<script src="javascript/favorites.js"></script>
