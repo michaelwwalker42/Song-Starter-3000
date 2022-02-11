@@ -21,7 +21,7 @@ async function signupFormHander(event) {
         // check the response status
         if(response.ok) {
             console.log('success')
-            document.location.replace('/');
+            document.location.replace('/progressions');
         } else {
             alert(response.statusText)
         }

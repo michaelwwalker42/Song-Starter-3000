@@ -3,9 +3,9 @@ const withAuth = require('../utils/auth');
 
 //get main page
 router.get('/', (req, res) => {
-    //redirect to profile page if user is already signed in
+    //redirect to progressions page if user is already signed in
     if(req.session.user_id) {
-        res.redirect('/')
+        res.redirect('/progressions')
     } else {
         res.render('homepage', {
             loggedIn: req.session.loggedIn
@@ -15,33 +15,52 @@ router.get('/', (req, res) => {
 
 // get login page
 router.get('/login', (req, res) => {
-    // make if statment to redirect if logged in
-      res.render('login', {
-        loggedIn: true
-    })
+    if(req.session.loggedIn) {
+        res.redirect('/');
+        return;
+      }
+      res.render('login');
 });
 
 //get signup page
 router.get('/signup', (req, res) => {
-    //need to redirect to homepage if already logged in
-    res.render('signup', {
-        loggedIn: true
-    })
-})
+    if(req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    res.render('signup');
+});
 
 // go to progression generator page ** with auth needed
 router.get('/progressions', withAuth, (req, res) => {
     res.render('progressions', {
-        loggedIn: true
+        loggedIn: req.session.loggedIn
     });
-})
+});
 
 //get favorites ** need to add withAuth
 router.get('/favorites', withAuth, (req, res) => {
-    // get all favorites where user_id is equal to req.params.id, this will also be session.user_id
+    Progression.findAll({
+        where: {
+            user_id: req.session.user_id
+        },
+        attributes: ['id', 'progression_name', 'chords']
+    })
+    .then(dbProgresssionData => {
+        
+        const chords = dbProgresssionData.map(chord => chord.get({ plain: true }));
+        res.render('favorites', { 
+          chords,
+          loggedIn: req.session.loggedIn
+         });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
     res.render('favorites', {
-        favorites
+        loggedIn: req.session.loggedIn
     });
-})
+});
 
 module.exports = router;
