@@ -19,7 +19,7 @@ router.get('/', withAuth, (req, res) => {
       });
 })
 
-//  post from save.js file new favorite
+//  TODO post from save.js file new favorite
 router.post('/', withAuth, (req, res) => {
     Progression.create({
         progression_name: req.body.name,
