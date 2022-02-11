@@ -5,15 +5,15 @@ const Progression = require('./Progression');
 
 // create associations
 User.hasMany(Progression, {
-  foreignKey: 'progression_id'
+  foreignKey: 'user_id',
+  onDelete:'CASCADE'
 });
 
 Progression.belongsTo(User, {
-  foreignKey: 'user_id'
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
 });
 
-Category.hasMany(Scale, {
-  foreignKey: 'scale_id'
-});
+
 
 module.exports = { Category, Scale, User, Progression }
