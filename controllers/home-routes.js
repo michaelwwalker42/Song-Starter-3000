@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
+const { Progression } = require('../models');
 
 //get main page
 router.get('/', (req, res) => {
@@ -49,6 +50,7 @@ router.get('/favorites', withAuth, (req, res) => {
     .then(dbProgresssionData => {
         
         const chords = dbProgresssionData.map(chord => chord.get({ plain: true }));
+        console.log(chords);
         res.render('favorites', { 
           chords,
           loggedIn: req.session.loggedIn
@@ -58,9 +60,6 @@ router.get('/favorites', withAuth, (req, res) => {
         console.log(err);
         res.status(500).json(err);
       });
-    res.render('favorites', {
-        loggedIn: req.session.loggedIn
-    });
 });
 
 module.exports = router;

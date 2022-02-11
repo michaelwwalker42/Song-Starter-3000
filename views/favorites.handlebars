@@ -1,20 +1,20 @@
 <section>
-    {{#if favorites.length}}
+    {{#if chords.length}}
     <div class="columns is-mobile ml-4 mt-6">
             <div class="save-title column is-one-quarter">
-                <h1>Name</h1>
+                <h1>Progression Name</h1>
             </div>
             <div class="save-chords column is-one-quarter">
                 <h2>Chord Progression</h2>
             </div>
     </div>
-    {{#each favorites as |favorite|}}
+    {{#each chords as |chord|}}
     <div class="columns is-mobile ml-4 mt-1">
             <div class="save-title column is-one-quarter">
-                <h2>{{favorite.progression_name}}</h1>
+                <h2>{{chord.progression_name}}</h1>
             </div>
             <div class="save-chords column is-one-quarter">
-                <h3>{{favorite.chords}}</h2>
+                <h3>{{chord.chords}}</h2>
             </div>
     </div>
    {{/each}}

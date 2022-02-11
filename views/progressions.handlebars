@@ -67,8 +67,8 @@
         <a id="random-btn" class="is-size-5 button is-dark is-hovered is-focused">Generate Music</a>
     </div>
     {{!-- display randomly generated chords loads as hidden until  --}}
-    <div class="mx-6">
-        <div id='progression' class="hidden box mx-6">
+    <div id="display" class="hidden mx-6">
+        <div class="box mx-6">
             <div id='chord-columns'class="columns is-mobile is-centered">
                 {{!-- generate the columns with the random chords in a js file --}}
                 {{#if chords.length}}
@@ -79,13 +79,14 @@
                 {{/each}}
                 {{/if}}             
             </div>
-            {{!-- option to save --}}
-            <div id="save-btn" class="is-flex is-justify-content-center mt-6">
-                <a class="is-size-5 save-btn button is-dark is-hovered is-focused mt-6">Save progression</a>
-            </div>
+        </div>
+        {{!-- option to save --}}
+        <div id="save-btn" class="is-flex is-justify-content-center mt-6">
+            <a class="is-size-5 save-btn button is-dark is-hovered is-focused mt-6">Save progression</a>
         </div>
     </div>
     
 </section>
 
 <script src="/javascript/progressions.js"></script>
+<script src="/javascript/save.js"></script>
