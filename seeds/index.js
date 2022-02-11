@@ -1,8 +1,10 @@
 const seedUsers = require('./user-seeds');
 const seedCategories = require('./category-seeds');
 const seedScales = require('./scale-seeds');
+const seedProgressions = require('./favorite-seeds');
 
 const sequelize = require('../config/connection');
+const seedProgressions = require('./favorite-seeds');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
@@ -15,6 +17,9 @@ const seedAll = async () => {
   console.log('--------------');
 
   await seedScales();
+  console.log('--------------');
+
+  await seedProgressions();
   console.log('--------------');
   
   process.exit(0);

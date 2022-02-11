@@ -72,11 +72,11 @@
             <div id='chord-columns'class="columns is-mobile is-centered">
                 {{!-- generate the columns with the random chords in a js file --}}
                 {{#if chords.length}}
-                {{}}
-                {{#foreach chords as |chord|}}
+                {{#each chords as |chord|}}
                 <div class="column center is-1">
                    {{chord}}
                 </div>   
+                {{/each}}
                 {{/if}}             
             </div>
             {{!-- option to save --}}
