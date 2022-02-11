@@ -4,7 +4,6 @@ const seedScales = require('./scale-seeds');
 const seedProgressions = require('./favorite-seeds');
 
 const sequelize = require('../config/connection');
-const seedProgressions = require('./favorite-seeds');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });

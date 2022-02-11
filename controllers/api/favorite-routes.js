@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Progression } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// get favorite progressions with user_id, add witAuth
+// get favorite progressions for user with user id
 router.get('/', (req, res) => {
     Progression.findAll({
         where: {
