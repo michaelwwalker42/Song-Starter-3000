@@ -22,7 +22,7 @@ const classValue= (e) => {
 
 
 
-// fetch request to get all chords for scale selected
+// TODO fetch request to get all chords for scale selected
 //need to decide if it's going to be from api or model in our db
 
 async function getChords() {
@@ -30,20 +30,14 @@ async function getChords() {
     alert('Please choose a key and number of chords')
     return;
   } else {
-    const newKey = key + keySharp + keyClass;
-    const response = await fetch(`/api/music`, {
-      method: 'GET',
-      body: JSON.stringify({
-        newKey,
-        chordNumber
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+    //TODO formate scale to fetch from external api
+    const response = await fetch(`expertnal api`, {
+      
     });
   
     if (response.ok) {
       //function to display chords;
+      // TODO get returned data and assign to chrodsarray
       randomProgression(chordsArray, chordNumber);
 
     } else {
@@ -54,7 +48,8 @@ async function getChords() {
     
 }
 
-// might need the fetch request to render a partial handlebars in the genterate page that will display the chords and will take the random progression function from the helpers. send the key and length in the body of the get request
+//global variable for random chord progression
+let newProgression;
 
 // function to randomly generate a chord progression
 function randomProgression(chordsArray, chordNumber) {
@@ -71,7 +66,7 @@ function randomProgression(chordsArray, chordNumber) {
   // randomly sort the array
   const shuffledChords = chordsArray.sort(() => 0.5 - Math.random());
   // slice the array between index[0] and how long the progression should be
-  const newProgression = shuffledChords.slice(0, chordNumber);
+  newProgression = shuffledChords.slice(0, chordNumber);
   return displayProgression(newProgression, chordNumber);
 };
 
@@ -86,6 +81,7 @@ const displayProgression= (chords, chordNumber) => {
    const chordColumns = document.querySelector('#chord-columns');
    //how wide the columns need to be based on number of chords to display
    const columnsize = Math.floor(8/chordNumber);
+    chordColumns.innerHTML = '';
    
    //generate chord column and value
    chords.forEach(chord => {
@@ -95,11 +91,32 @@ const displayProgression= (chords, chordNumber) => {
       chordColumns.appendChild(chordDiv);
    });
 
-
 }
 
-chordNumber = 4;
-testchords = ['a', 'b', 'c', 'd', 'e'];
+// TODO create modal to ask for a name to give the saved progressio
+const generateTitle = () => {
+  
+}
+
+async function saveChords() {
+  
+  const response = await fetch('/api/favorite', {
+      method: 'POST',
+      body: {
+          newProgression,
+          title
+      },
+      headers: {
+          'Content-Type': 'application/json'
+        }
+  });
+
+  if (response.ok) {
+      document.location.reload('/progressions');
+  } else {
+      alert(response.statusText);
+  }
+}
 
 // event listeners
 numberSelect.addEventListener('change', numberValue);
@@ -109,3 +126,4 @@ classSelect.addEventListener('change', classValue);
 document.querySelector('#random-btn').addEventListener('click', ()=> {
     randomProgression(testchords, chordNumber);
 });
+document.querySelector('#save-btn').addEventListener('click', generateTitle);
