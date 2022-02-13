@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/giyu1/project2-#readme",
   "dependencies": {
+    "@tonaljs/key": "^4.6.5",
+    "@tonaljs/tonal": "^4.6.5",
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.2",
     "express": "^4.17.2",

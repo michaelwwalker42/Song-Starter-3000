@@ -3,90 +3,92 @@
     Randomly generate a chord progression with the options below
   </div>
   {{!-- drop down boxes to choose key for random chords --}}
-    <div class="columns mx-6 is-mobile is-centered">
-        <div class="column is-3">
-            <div class="secition is-medium">
-                <div class="mb-4">
-                    Select a number of chords
-                </div>
-                <div class="select select-number">
-                <select>
-                    <option></option>
-                    <option value="one">One</option>
-                    <option value="two">Two</option>
-                    <option value="three">Three</option>
-                    <option value="four">Four</option>
-                    <option value="five">Five</option>
-                    <option value="six">Six</option>
-                    <option value="seven">Seven</option>
-                </select>
-                </div>
-            </div>
+  <div class="columns mx-6 is-mobile is-centered">
+    <div class="column is-3">
+      <div class="secition is-medium">
+        <div class="mb-4">
+          Select a number of chords
         </div>
-        <div class="column is-2">
-            <div>
-                Choose a Key
-            </div>
-            <div class="select select-key">
-            <select>
-                <option></option>
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
-                <option value="D">D</option>
-                <option value="E">E</option>
-                <option value="F">F</option>
-                <option value="G">G</option>
-            </select>
-            </div>
-            <div class="select select-keysharp">
-            <select>
-                <option value="none"></option>
-                <option value="sharp">#</option>
-                <option value="flat" class="flat">b</option>
-            </select>
-            </div>
+        <div class="select select-number">
+          <select>
+            <option></option>
+            <option value="one">One</option>
+            <option value="two">Two</option>
+            <option value="three">Three</option>
+            <option value="four">Four</option>
+            <option value="five">Five</option>
+            <option value="six">Six</option>
+            <option value="seven">Seven</option>
+          </select>
         </div>
-        <div class="column is-4">
-            <div>
-                Choose pitch class
-            </div>
-            <div class="select select-class">
-            <select>
-                <option></option>
-                <option value="major">Major</option>
-                <option value="minor">Minor</option>
-                <option value="diatonic">Diatonic</option>
-            </select>
-            </div>
-        </div>
-        
+      </div>
     </div>
-    {{!-- button to generate chords --}}
-    <div class="is-flex is-justify-content-center">
-        <a id="random-btn" class="is-size-5 button is-dark is-hovered is-focused">Generate Music</a>
+    <div class="column is-2">
+      <div>
+        Choose a Key
+      </div>
+      <div class="select select-key">
+        <select>
+          <option></option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+          <option value="E">E</option>
+          <option value="F">F</option>
+          <option value="G">G</option>
+        </select>
+      </div>
+      <div class="select select-keysharp">
+        <select>
+          <option value="none"></option>
+          <option value="sharp">#</option>
+          <option value="flat" class="flat">b</option>
+        </select>
+      </div>
     </div>
-    {{!-- display randomly generated chords loads as hidden until  --}}
-    <div id="display" class="hidden mx-6">
-        <div class="box mx-6">
-            <div id='chord-columns'class="columns is-mobile is-centered">
-                {{!-- generate the columns with the random chords in a js file --}}
-                {{#if chords.length}}
-                {{#each chords as |chord|}}
-                <div class="column center is-1">
-                   {{chord}}
-                </div>   
-                {{/each}}
-                {{/if}}             
-            </div>
-        </div>
-        {{!-- option to save --}}
-        <div id="save-btn" class="is-flex is-justify-content-center mt-6">
-            <a class="is-size-5 save-btn button is-dark is-hovered is-focused mt-6">Save progression</a>
-        </div>
+    <div class="column is-4">
+      <div>
+        Choose pitch class
+      </div>
+      <div class="select select-class">
+        <select>
+          <option></option>
+          <option value="major">Major</option>
+          <option value="minor">Minor</option>
+          <option value="diatonic">Diatonic</option>
+        </select>
+      </div>
     </div>
-    
+
+  </div>
+  {{!-- button to generate chords --}}
+  <div class="is-flex is-justify-content-center">
+    <a id="random-btn" class="is-size-5 button is-dark is-hovered is-focused">Generate Music</a>
+  </div>
+  {{!-- display randomly generated chords loads as hidden until --}}
+  <div id="display" class="hidden mx-6">
+    <div class="box mx-6">
+      <div id='chord-columns' class="columns is-mobile is-centered">
+        {{!-- generate the columns with the random chords in a js file --}}
+        {{#if chords.length}}
+        {{#each chords as |chord|}}
+        <div class="column center is-1">
+          {{chord}}
+        </div>
+        {{/each}}
+        {{/if}}
+      </div>
+    </div>
+    {{!-- option to save --}}
+    <div id="save-btn" class="is-flex is-justify-content-center mt-6">
+      <a class="is-size-5 save-btn button is-dark is-hovered is-focused mt-6">Save progression</a>
+    </div>
+  </div>
+
 </section>
+{{!-- import tonaljs --}}
+<script src="https://cdn.jsdelivr.net/npm/@tonaljs/tonal/browser/tonal.min.js"></script>
 
 <script src="/javascript/progressions.js"></script>
 <script src="/javascript/save.js"></script>

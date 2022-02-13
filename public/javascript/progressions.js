@@ -19,34 +19,56 @@ const keySharpValue= (e) => {
 const classValue= (e) => {
     keyClass = e.target.value;
 }
+// function to get chords from a major scale
+function getMajorChords(key) {
+    // this function will take an argument of a major key
+  // and return an array of the chords of that key
+  
+  // example:
+  // getMajorChords("C") will return
+  // Cmaj7,Dm7,Em7,Fmaj7,G7,Am7,Bm7b5
+  const chords = Tonal.Key.majorKey(`${key}`).chords;
+  console.log("Major chords:  " + chords);
+  return chords;
+}
+// function to get chords from a minor scale
+function getMinorChords(key) {
+  // this function will take an argument of a minor key
+  // and return an array of the chords of that key
 
+  // example: 
+  // getMinorChords("C") will return
+  // Cm7,Dm7b5,Ebmaj7,Fm7,Gm7,Abmaj7,Bb7
 
+  const chords = Tonal.Key.minorKey(`${key}`).natural.chords;
+  console.log("Minor chords:  " + chords);
+  return chords;
+}
 
 // TODO fetch request to get all chords for scale selected
 //need to decide if it's going to be from api or model in our db
 
-async function getChords() {
-  if(!key || !chordNumber) {
-    alert('Please choose a key and number of chords')
-    return;
-  } else {
-    //TODO formate scale to fetch from external api
-    const response = await fetch(`expertnal api`, {
+// async function getChords() {
+//   if(!key || !chordNumber) {
+//     alert('Please choose a key and number of chords')
+//     return;
+//   } else {
+//     //TODO formate scale to fetch from external api
+//     const response = await fetch(`expertnal api`, {
       
-    });
+//     });
   
-    if (response.ok) {
-      //function to display chords;
-      // TODO get returned data and assign to chrodsarray
-      randomProgression(chordsArray, chordNumber);
+//     if (response.ok) {
+//       //function to display chords;
+//       // TODO get returned data and assign to chrodsarray
+//       randomProgression(chordsArray, chordNumber);
 
-    } else {
-      alert(response.statusText);
-    }
-  }
-   
-    
-}
+//     } else {
+//       alert(response.statusText);
+//     }
+//   }   
+// }
+
 
 //global variable for random chord progression
 let newProgression;
