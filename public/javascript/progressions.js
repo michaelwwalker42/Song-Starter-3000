@@ -12,7 +12,7 @@ const randomMajKey = majKeySigs[(Math.floor(Math.random() * majKeySigs.length))]
 const randomMinKey = minKeySigs[(Math.floor(Math.random() * minKeySigs.length))];
 
 function completelyRandomProgression() {
-  // random length between 2-4
+  // this function will randomly select a key and create a progression 2-4 chords long
   const randomLength = Math.max((Math.ceil(Math.random() * 4)), 2);
   if (Math.random() > 0.5) {
     let key = randomMajKey;
