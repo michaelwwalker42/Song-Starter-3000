@@ -39,6 +39,16 @@ router.get('/progressions', withAuth, (req, res) => {
     });
 });
 
+// // relaod progression pages with chords
+// router.post('/progression', withAuth, (req, res) => {
+//     res.send(req.body.chords)
+//     // res.render('progressions', {
+//     //     chordNumber: req.body.chordNumber,
+//     //     chords: req.body.chords, 
+//     //     loggedIn: req.session.loggedIn
+//     // })
+// })
+
 //get favorites ** need to add withAuth
 router.get('/favorites', withAuth, (req, res) => {
     Progression.findAll({
@@ -50,7 +60,6 @@ router.get('/favorites', withAuth, (req, res) => {
     .then(dbProgresssionData => {
         
         const chords = dbProgresssionData.map(chord => chord.get({ plain: true }));
-        console.log(chords);
         res.render('favorites', { 
           chords,
           loggedIn: req.session.loggedIn

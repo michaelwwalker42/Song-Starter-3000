@@ -12,13 +12,13 @@
         <div class="select select-number">
           <select>
             <option></option>
-            <option value="one">One</option>
-            <option value="two">Two</option>
-            <option value="three">Three</option>
-            <option value="four">Four</option>
-            <option value="five">Five</option>
-            <option value="six">Six</option>
-            <option value="seven">Seven</option>
+            <option value=1>One</option>
+            <option value=2>Two</option>
+            <option value=3>Three</option>
+            <option value=4>Four</option>
+            <option value=5>Five</option>
+            <option value=6>Six</option>
+            <option value=7>Seven</option>
           </select>
         </div>
       </div>
@@ -41,9 +41,9 @@
       </div>
       <div class="select select-keysharp">
         <select>
-          <option value="none"></option>
-          <option value="sharp">#</option>
-          <option value="flat" class="flat">b</option>
+          <option value=""></option>
+          <option value="#">#</option>
+          <option value="b" class="flat">b</option>
         </select>
       </div>
     </div>
@@ -56,7 +56,6 @@
           <option></option>
           <option value="major">Major</option>
           <option value="minor">Minor</option>
-          <option value="diatonic">Diatonic</option>
         </select>
       </div>
     </div>
@@ -85,10 +84,22 @@
       <a class="is-size-5 save-btn button is-dark is-hovered is-focused mt-6">Save progression</a>
     </div>
   </div>
+  {{!-- popup to save title --}}
+  <div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <div class="field">
+  <label class="label has-text-success">Give your chord progression a name</label>
+  <div class="control">
+    <input id='progression-title' class="input" type="text" placeholder="cool chords">
+  </div>
+</div>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
 
 </section>
 {{!-- import tonaljs --}}
 <script src="https://cdn.jsdelivr.net/npm/@tonaljs/tonal/browser/tonal.min.js"></script>
 
 <script src="/javascript/progressions.js"></script>
-<script src="/javascript/save.js"></script>
