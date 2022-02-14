@@ -100,24 +100,23 @@ const generateTitle = () => {
 const closeModal = (target) => {
   title = document.querySelector('#progression-title').value.trim();
   modal.classList.remove('is-active');
-  
+  saveChords(title)
 }
 
-async function saveChords(newProgression) {
-  
+async function saveChords(title) {  
   const response = await fetch('/api/favorite', {
       method: 'POST',
-      body: {
+      body: JSON.stringify ({
           newProgression,
           title
-      },
+      }),
       headers: {
           'Content-Type': 'application/json'
         }
   });
 
   if (response.ok) {
-      document.location.reload('/progressions');
+      location.reload('/progressions');
   } else {
       alert(response.statusText);
   }
