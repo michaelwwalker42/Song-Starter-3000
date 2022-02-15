@@ -1,35 +1,25 @@
 
-{{#if loggedIn}}
 <section class="main-pg section is-medium">
     <div class="columns is-centered">
         <div class="column is-5">
             <h1 class="center is-size-3">Get Inspired! Click the button to generate a random chord progression.</h1>
-            <div class="box center level">
-                <p class="is-size-4 level-item">Chord will go here</p>
-            </div >
-            <div class="is-flex is-justify-content-center">
+             <div id="display" class="hidden mx-6">
+                <div class="box mx-6">
+                    <div id='chord-columns' class="columns is-mobile is-centered">
+                        {{!-- chords with be dynamically generated here --}}
+                    </div>
+                </div>
+             </div>
+            <div id="main-btn" class="is-flex is-justify-content-center">
                 <a class="is-size-4 random-btn button is-dark is-hovered is-focused">Generate Music</a>
             </div>
         </div>
     </div>
     
-    {{else}}
-    <section class="main-pg section is-medium">
-    <div class="columns is-centered">
-        <div class="column is-5">
-            <h1 class="center is-size-3">Get Inspired! Click the button to generate a random chord progression.</h1>
-            <div class="box center level">
-                <p class="is-size-4 level-item">Chord will go here</p>
-            </div >
-            <div class="is-flex is-justify-content-center">
-                <a class="is-size-4 random-btn button is-dark is-hovered is-focused">Generate Music</a>
-            </div>
-        </div>
-    </div>
-
     <div class="login columns is-centered">
         <p class="column is-5 center">or <a href="/login">login/signup</a> for more music inspiration!</p>
     </div>
-    {{/if}}
 
 </section>
+<script src="https://cdn.jsdelivr.net/npm/@tonaljs/tonal/browser/tonal.min.js"></script>
+<script src="/javascript/main.js"></script>
