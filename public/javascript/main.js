@@ -1,4 +1,5 @@
 const { Key } = window.Tonal; 
+import {randomProgression , displayProgression} from '/javascript/shared.js';
 
 const majKeySigs = ['C', 'F', 'Bb', 'Eb', 'Ab', 'Db', 'Gb', 'Cb', 'G', 'D', 'A', 'E', 'B', 'F#', 'C#'];
 const minKeySigs = ['A', 'E', 'B', 'F#', 'C#', 'G#', 'D#', 'A#', 'D', 'G', 'C', 'F', 'Bb', 'Eb', 'Ab'];
@@ -37,9 +38,6 @@ function randomProgression(chordsArray, number) {
 
   // function to display chords
 const displayProgression = (chords, number) => {
-    console.log('from display proression, chordsarry=' + chords + ' number ' + number); 
-
-
     const progressionDisplay = document.querySelector('#display');
     // remove hidden attribute and add display attribute
     progressionDisplay.classList.remove("hidden");
