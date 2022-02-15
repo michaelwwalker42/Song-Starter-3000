@@ -1,9 +1,9 @@
 <section class="mt-6">
-  <div class="mx-6 mb-6">
+  <div class="mx-6 mb-6 has-text-success is-size-4">
     Randomly generate a chord progression with the options below
   </div>
   {{!-- drop down boxes to choose key for random chords --}}
-  <div class="columns mx-6 is-mobile is-centered">
+  <div class="columns mx-6 is-centered">
     <div class="column is-3">
       <div class="secition is-medium">
         <div class="mb-4">
@@ -68,7 +68,7 @@
   {{!-- display randomly generated chords loads as hidden until --}}
   <div id="display" class="hidden mx-6">
     <div class="box mx-6">
-      <div id='chord-columns' class="columns is-mobile is-centered">
+      <div id='chord-columns' class="columns is-centered">
         {{!-- chords with be dynamically generated here --}}
       </div>
     </div>
@@ -95,4 +95,4 @@
 {{!-- import tonaljs --}}
 <script src="https://cdn.jsdelivr.net/npm/@tonaljs/tonal/browser/tonal.min.js"></script>
 
-<script src="/javascript/progressions.js"></script>
+<script type="module" src="/javascript/progressions.js"></script>

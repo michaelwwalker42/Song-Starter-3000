@@ -16,7 +16,8 @@ async function loginFormHandler(event) {
 
       if (response.ok) {
         document.location.replace('/progressions');
-      } else {
+      } else { 
+        console.log(response.message)
         alert(response.statusText);
       }
   }
