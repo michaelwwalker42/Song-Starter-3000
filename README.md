@@ -2,16 +2,20 @@
   ![license](https://img.shields.io/badge/license-MIT-orange.svg)
 
   ## Description
-  This application is a song writing tool that creates chord progressions. 
-
+  This application is a song writing tool that creates chord progressions. Users can log in to choose what key they want to use, and how long the progression should be. Users can also save progressions and add them to favorites. Non-users can still create random progressions without having to sign in. 
+![song-starter-screenshot](assets/images/song-starter-screenshot.png)
   ## Table of Contents
+  * [Deployment](#deployment)
   * [Technologies](#technologies)
   * [Usage](#usage)
   * [Tests](#tests)
-  * [Contributors](#contributing)  
-  * [License](#license) 
+  * [Contributors](#contributors)  
+  * [Future](#future)  
+  * [License](#license)  
   
-  
+  ## Deployment
+  The site is hosted by [Heroku](https://www.heroku.com), and uses [JawsDb](https://elements.heroku.com/addons/jawsdb) MySQL database.   
+  [Click here to go to site](https://song-starter-3000.herokuapp.com/)
   ## Technologies
   - [bcrypt](https://www.npmjs.com/package/bcrypt)
   - [bulma](https://bulma.io/)
@@ -22,18 +26,24 @@
   - [jest](https://jestjs.io/)
   - [mysql2](https://www.npmjs.com/package/mysql2)
   - [sequelize](https://sequelize.org/)
-  - [tonaljs]()  
+  - [tonaljs](https://github.com/tonaljs/tonal)  
 
   ## Usage
-  Press the button to create a random chord progression, or sign up to choose what key and how many chords you'd like in the progression
+  Press the button to create a random chord progression, or sign up to choose what key and how many chords you'd like in the progression. Users can optionally save the progression for future reference. 
   ## Tests
+  [Jest](https://jestjs.io/) was used for testing.  
   `npm run test` to test the helper functions  
   ## Contributors
-  [michaelwwalker42](https://github.com/michaelwwalker42)  
-  [dmknapp2385](https://github.com/dmknapp2385) 
+  - [michaelwwalker42](https://github.com/michaelwwalker42)  
+  - [dmknapp2385](https://github.com/dmknapp2385) 
 
-
-
+  ## Future 
+Some features we'd like to add in the future:
+ - More chord variety (sus chords, chord extensions, etc.)
+ - Piano and guitar diagrams to demonstrate how to play chords
+ - sound clips to play the chords
+ - ability to create midi files from the chord progressions
+ - option to randomly select a tempo
   ## License
   MIT License
 
