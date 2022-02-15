@@ -69,14 +69,7 @@
   <div id="display" class="hidden mx-6">
     <div class="box mx-6">
       <div id='chord-columns' class="columns is-mobile is-centered">
-        {{!-- generate the columns with the random chords in a js file --}}
-        {{#if chords.length}}
-        {{#each chords as |chord|}}
-        <div class="column center is-1">
-          {{chord}}
-        </div>
-        {{/each}}
-        {{/if}}
+        {{!-- chords with be dynamically generated here --}}
       </div>
     </div>
     {{!-- option to save --}}

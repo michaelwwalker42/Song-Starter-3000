@@ -2,7 +2,7 @@ const numberSelect = document.querySelector('.select-number');
 const keySelect = document.querySelector('.select-key');
 const keySharpSelect = document.querySelector('.select-keysharp');
 const classSelect = document.querySelector('.select-class');
-const { Key } = window.Tonal;
+const { Key } = window.Tonal; 
 
 let chordNumber, key, keySharp, keyClass;
 
@@ -12,20 +12,21 @@ const randomMajKey = majKeySigs[(Math.floor(Math.random() * majKeySigs.length))]
 const randomMinKey = minKeySigs[(Math.floor(Math.random() * minKeySigs.length))];
 
 function completelyRandomProgression() {
+  console.log('clicked')
   // this function will randomly select a key and create a progression 2-4 chords long
-  const randomLength = Math.max((Math.ceil(Math.random() * 4)), 2);
+  chordNumber = Math.max((Math.ceil(Math.random() * 4)), 2);
   if (Math.random() > 0.5) {
     let key = randomMajKey;
     console.log(`Key: ${key} major`);
-    const chords = Key.majorKey(key).chords;
+    const chords = Tonal.Key.majorKey(`${key}`).chords;
     console.log(`Chords: ${chords}`);
-    randomProgression(chords, randomLength);
+    randomProgression(chords);
   } else {
     let key = randomMinKey;
     console.log(`Key: ${key} minor`);
-    const chords = Key.minorKey(key).natural.chords;
+    const chords = Tonal.Key.minorKey(`${key}`).chords;
     console.log(`Chords: ${chords}`);
-    randomProgression(chords, randomLength);
+    randomProgression(chords);
   }
 };
 
@@ -147,11 +148,14 @@ async function saveChords(title) {
   }
 }
 
-// event listeners
+
+// event listeners for dropdown menus
 numberSelect.addEventListener('change', numberValue);
 keySelect.addEventListener('change', keyValue);
 keySharpSelect.addEventListener('change', keySharpValue);
 classSelect.addEventListener('change', classValue);
+
+// click event for generating random chord progression
 document.querySelector('#random-btn').addEventListener('click', () => {
   if (!chordNumber || !keyValue || !keyClass) {
     alert('You must select a chord number, key and class');
@@ -170,6 +174,7 @@ document.querySelector('#random-btn').addEventListener('click', () => {
   }
 
 });
+// click event for save button
 document.querySelector('#save-btn').addEventListener('click', generateTitle);
 // Add a click event on various child elements to close the parent modal
 (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach((close) => {
@@ -179,3 +184,4 @@ document.querySelector('#save-btn').addEventListener('click', generateTitle);
     closeModal(target);
   });
 });
+
