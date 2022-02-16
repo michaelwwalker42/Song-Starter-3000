@@ -1,46 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Song Starter 3000</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link href="//db.onlinewebfonts.com/c/8cdbb48678e4418f22a2f507c2b975bd?family=Blanka" rel="stylesheet" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Share+Tech+Mono&family=Staatliches&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Song Starter 3000</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link href="//db.onlinewebfonts.com/c/8cdbb48678e4418f22a2f507c2b975bd?family=Blanka" rel="stylesheet"
+    type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Share+Tech+Mono&family=Staatliches&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9481a02745.js" crossorigin="anonymous"></script>
 
 </head>
+
 <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="/">Song Starter <br>3000</a>
-        </div>
-    </nav>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">Song Starter <br>3000 <span class="icon is-medium">
+          <i class="fas fa-thin fa-rocket"></i>
+        </span></a>
 
-    <hero>
-        <div id="profile-logout" class="">
-            {{#if loggedIn}}
-            <a id="progressions" class="is-size-4 no-link" href="/progressions">Generate</a>
-            <a id="favorites" class="is-size-4 no-link" href="/favorites">Favorites</a>
-            <a id="logout" class="is-size-4 is-light no-link">Logout</a>
-            
-        </div>
-    </hero>
-  
-    <section>
-        {{{body}}}
-    </section>
-    
-    <script src="/javascript/logout.js"></script> 
-    {{else}}
+    </div>
+  </nav>
 
-    <section>
-        {{{body}}}
-    </section>
-    {{/if}}
+  <hero>
+    <div id="profile-logout" class="">
+      {{#if loggedIn}}
+      <a id="profile" class="is-size-4" href="/progressions">Generate</a>
+      <a id="profile" class="is-size-4" href="/favorites">Favorites</a>
+      <a id="logout" class="is-size-4 is-light">Logout</a>
+
+    </div>
+  </hero>
+
+  <section>
+    {{{body}}}
+  </section>
+
+  <script src="/javascript/logout.js"></script>
+  {{else}}
+
+  <section>
+    {{{body}}}
+  </section>
+  {{/if}}
 
 </body>
+
 </html>

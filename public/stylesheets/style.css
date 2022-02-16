@@ -31,14 +31,28 @@
     font-size: 45px;
     text-align: center;
 }
-
+/* 
 .navbar a {
     text-decoration: none;
-    color: white;
+    color: #27ff00;
+    text-shadow: 3px 2px #02772f;
+    font-weight: 600;
+} */
+.navbar a {
+  text-decoration: none;
+  color: #72ff59;
+  text-shadow: -3px 2px #02772f;
+  font-weight: 700;
+  animation: mymove 2s infinite;
+}
+@keyframes mymove {
+  50% {text-shadow: -1px 1px #5afc3d;}
 }
 
 a.navbar-item:hover {
-    color: #48c78e;
+  text-decoration: none;
+  color: #27ff00;
+  
 }
 
 .no-link {
