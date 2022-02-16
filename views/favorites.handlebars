@@ -11,13 +11,20 @@
     {{#each chords as |chord|}}
     <div class="columns is-mobile ml-4 mt-1">
             <div class="save-title column ml-4 is-one-quarter">
-                <h2>{{chord.progression_name}}</h1>
+                <h2 class="is-size-5 has-text-weight-semibold">{{chord.progression_name}}</h1>
             </div>
             <div class="save-chords column is-half">
                 <h3> {{#each chord.chords as |singleChord|}}<span class="alt-font mr-5">{{singleChord}}</span>{{/each}} </h2>
             </div>
+            <div class="edit-favorites column is-one-quarter">
+                <div>
+                    <a id="progression-edit" class="no-link" href="/edit/{{chord.id}}">Edit</a>
+                </div>
+            </div>
+
     </div>
    {{/each}}
    {{/if}}
 </section>
+
 

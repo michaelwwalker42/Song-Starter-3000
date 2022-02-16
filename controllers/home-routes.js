@@ -62,4 +62,26 @@ router.get('/favorites', withAuth, (req, res) => {
       });
 });
 
+// go to edit page for single saved progression
+router.get('/edit/:id', withAuth, (req, res) => {
+    Progression.findOne({
+        where: {
+            id: req.params.id
+        },
+        attributes: ['id', 'progression_name', 'chords']
+    })
+    .then(chordData => {
+        const chord = chordData.get({ plain: true });
+        console.log('-----------------\n' + chord.progression_name);
+        res.render('edit-progression', { 
+          chord,
+          loggedIn: req.session.loggedIn
+         });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+});
+
 module.exports = router;
