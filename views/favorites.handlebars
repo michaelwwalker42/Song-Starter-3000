@@ -14,7 +14,9 @@
                 <h2>{{chord.progression_name}}</h1>
             </div>
             <div class="save-chords column is-half">
-                <h3 class="alt-font">{{chord.chords}}</h2>
+                {{#each chord.chords as |singleChord|}}
+                <h3 class="alt-font">{{singleChord}}</h2>
+                {{/each}}
             </div>
     </div>
    {{/each}}
