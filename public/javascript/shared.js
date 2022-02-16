@@ -18,7 +18,6 @@
  };
 
   export function displayProgression(chords, chordNumber) {
-    console.log('from random progression, chords = ' + chords + 'chordnumber = ' + chordNumber);  
 
     const progressionDisplay = document.querySelector('#display');
     // remove hidden attribute and add display attribute
@@ -33,7 +32,7 @@
     //generate chord column and value
     chords.forEach(chord => {
       const chordDiv = document.createElement('div')
-      chordDiv.classList = `column center is-${columnsize}`;
+      chordDiv.classList = `column alt-font center is-${columnsize}`;
       chordDiv.innerHTML = chord
       chordColumns.appendChild(chordDiv);
     });

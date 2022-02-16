@@ -6,7 +6,9 @@
 }
 
 .alt-font {
-    font-family: 'LegacySansEF';
+    font-family: "IM Fell French Canon";
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .hidden {

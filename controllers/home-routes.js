@@ -39,15 +39,6 @@ router.get('/progressions', withAuth, (req, res) => {
     });
 });
 
-// // relaod progression pages with chords
-// router.post('/progression', withAuth, (req, res) => {
-//     res.send(req.body.chords)
-//     // res.render('progressions', {
-//     //     chordNumber: req.body.chordNumber,
-//     //     chords: req.body.chords, 
-//     //     loggedIn: req.session.loggedIn
-//     // })
-// })
 
 //get favorites ** need to add withAuth
 router.get('/favorites', withAuth, (req, res) => {
