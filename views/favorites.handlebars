@@ -4,17 +4,17 @@
             <div class="save-title column is-one-quarter">
                 <h1>Progression Name</h1>
             </div>
-            <div class="save-chords column is-one-quarter">
+            <div class="save-chords column is-half">
                 <h2>Chord Progression</h2>
             </div>
     </div>
     {{#each chords as |chord|}}
     <div class="columns is-mobile ml-4 mt-1">
-            <div class="save-title column is-one-quarter">
+            <div class="save-title column ml-4 is-one-quarter">
                 <h2>{{chord.progression_name}}</h1>
             </div>
-            <div class="save-chords column is-one-quarter">
-                <h3>{{chord.chords}}</h2>
+            <div class="save-chords column is-half">
+                <h3 class="alt-font">{{chord.chords}}</h2>
             </div>
     </div>
    {{/each}}
