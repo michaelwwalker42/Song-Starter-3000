@@ -23,7 +23,7 @@ router.get('/', withAuth, (req, res) => {
 router.post('/', withAuth, (req, res) => {
     Progression.create({
         progression_name: req.body.title,
-        chords: req.body.newProgression,
+        chords: req.body.saveChords,
         user_id: req.session.user_id
     })
     .then(data => {
@@ -40,6 +40,7 @@ router.put('/:id', withAuth, (req, res) => {
   Progression.update(
     {
       progression_name: req.body.title,
+      chords: req.body.progression
     },
     {
       where: {

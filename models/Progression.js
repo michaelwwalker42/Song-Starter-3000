@@ -17,7 +17,7 @@ Progression.init(
       type: DataTypes.STRING
     },
     chords: {
-      type: DataTypes.JSON,
+      type: DataTypes.STRING,
       allowNull: false
     },
     user_id: {

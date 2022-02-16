@@ -14,7 +14,8 @@
                 <h2 class="is-size-5 has-text-weight-semibold">{{chord.progression_name}}</h1>
             </div>
             <div class="save-chords column is-half">
-                <h3> {{#each chord.chords as |singleChord|}}<span class="alt-font mr-5">{{singleChord}}</span>{{/each}} </h2>
+                <h3 class="has-text-weight-semibold is-size-5">{{chord.chords}}</h3>
+                {{!-- <h3> {{#each chord.chords as |singleChord|}}<span class="alt-font mr-5">{{singleChord}}</span>{{/each}} </h2> --}}
             </div>
             <div class="edit-favorites column is-one-quarter">
                 <div>

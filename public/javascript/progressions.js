@@ -60,10 +60,13 @@ const closeModal = (target) => {
 }
 
 async function saveChords(title) {
+  // turn newprogression into a string to save to progressions
+  let saveChords = newProgression.join(", ");
+  console.log(typeof(saveChords))
   const response = await fetch('/api/favorite', {
     method: 'POST',
     body: JSON.stringify({
-      newProgression,
+      saveChords,
       title
     }),
     headers: {
