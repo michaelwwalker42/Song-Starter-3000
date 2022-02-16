@@ -37,13 +37,17 @@
 }
 
 a.navbar-item:hover {
-    color: aquamarine;
+    color: #48c78e;
 }
 
-#profile, #logout {
+#favorites, #progressions, #logout {
     color: black;
     text-decoration: none; 
     margin: 10px;
+}
+
+#favorites:hover, #progressions:hover, #logout:hover {
+    color: #48c78e;
 }
 
 
