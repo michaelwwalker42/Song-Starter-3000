@@ -18,7 +18,6 @@
  };
 
   export function displayProgression(chords, chordNumber) {
-    console.log('from random progression, chords = ' + chords + 'chordnumber = ' + chordNumber);  
 
     const progressionDisplay = document.querySelector('#display');
     // remove hidden attribute and add display attribute
