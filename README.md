@@ -3,7 +3,7 @@
 
   ## Description
   This application is a song writing tool that creates chord progressions. Users can log in to choose what key they want to use, and how long the progression should be. Users can also save progressions and add them to favorites. Non-users can still create random progressions without having to sign in. 
-![song-starter-screenshot](assets/images/song-starter-screenshot.png)
+![song-starter-screenshot](assets/images/song-starter-hero.gif)
   ## Table of Contents
   * [Deployment](#deployment)
   * [Technologies](#technologies)
@@ -29,7 +29,8 @@
   - [tonaljs](https://github.com/tonaljs/tonal)  
 
   ## Usage
-  Press the button to create a random chord progression, or sign up to choose what key and how many chords you'd like in the progression. Users can optionally save the progression for future reference. 
+  Press the button to create a random chord progression, or sign up to choose what key and how many chords you'd like in the progression. Users can optionally save the progression for future reference.  
+  ![song-starter-demo](assets/images/song-starter-demo.gif) 
   ## Tests
   [Jest](https://jestjs.io/) was used for testing.  
   `npm run test` to test the helper functions  
