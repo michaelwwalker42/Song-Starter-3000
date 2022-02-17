@@ -52,8 +52,8 @@ const generateTitle = () => {
   modal.classList.add('is-active');
 }
 
-const closeModal = (target) => {
-  console.log('clicked close modal')
+
+const closeModal = () => {
   let title = document.querySelector('#progression-title').value.trim();
   modal.classList.remove('is-active');
   saveChords(title)
@@ -115,12 +115,19 @@ document.querySelector('#random-btn').addEventListener('click', () => {
 });
 // click event for save button
 document.querySelector('#save-btn').addEventListener('click', generateTitle);
-// Add a click event on various child elements to close the parent modal
-(document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach((close) => {
-  const target = close.closest('.modal');
 
-  close.addEventListener('click', () => {
-    closeModal(target);
-  });
+
+//add keyup event to modal
+
+document.querySelector('#progression-title').addEventListener('keyup', (event) => {
+  if(event.code === 'Enter'){
+    closeModal();
+  }
 });
 
+// Add a click event on various child elements to close the parent modal
+(document.querySelectorAll('.modal-background, .modal-close, .modal-card-head') || []).forEach((item) => {
+  item.addEventListener('click', () => {
+    closeModal();
+  });
+});
