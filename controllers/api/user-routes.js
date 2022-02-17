@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { response } = require('express');
 const { User } = require('../../models');
 
 
@@ -43,15 +44,15 @@ router.post('/login', (req, res) => {
         where: {
             email: req.body.email
         }
-    }).then(dbUserData => {
+    }).then(dbUserData => { 
         if(!dbUserData) {
-            res.status(400).json({ message: 'Incorrect Password or Email!' })
+            res.status(401).json({message: 'incorrect email or password'});
             return;
         }
         //Verify user
         const validPassword = dbUserData.checkPassword(req.body.password)
         if (!validPassword) {
-            res.status(400).json({ message: 'Incorrect Password or Email!' });
+            res.status(401).json({message: 'incorrect'});
             return;
         }
 

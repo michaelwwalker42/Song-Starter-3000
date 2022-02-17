@@ -1,6 +1,7 @@
 <section class="login">
     <div class="columns is-centered">
         <div class="column is-6">
+            <div id="error-div" class="mt-6 has-text-success"></div>
             <form class="box login-form">
                 <div class="field">
                     <label class="label">Email</label>
@@ -26,4 +27,14 @@
         </div>
     </div>
 </section>
+
+ {{!-- popup to save title --}}
+  <div class="modal">
+  <div class="modal-background"></div>
+  <div id='error-popup' class="modal-content">
+      <div class="has-text-success is-dark">Incorrect Email or Password</div>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
 <script src="../javascript/login.js"></script>
