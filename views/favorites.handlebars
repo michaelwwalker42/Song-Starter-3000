@@ -15,11 +15,11 @@
             </div>
             <div class="save-chords column is-half">
                 <h3 class="has-text-weight-semibold is-size-5 center">{{chord.chords}}</h3>
-                {{!-- <h3> {{#each chord.chords as |singleChord|}}<span class="alt-font mr-5">{{singleChord}}</span>{{/each}} </h2> --}}
             </div>
             <div class="edit-favorites column is-one-quarter">
-                <div>
+                <div class="is-flex">
                     <a id="progression-edit" class="no-link" href="/edit/{{chord.id}}">Edit</a>
+                    <a id="{{chord.id}}" class="progression-delete no-link">Delete</a>
                 </div>
             </div>
 
@@ -29,5 +29,6 @@
    <div class="has-text-success is-size-4">No Progressions Saved</div>
    {{/if}}
 </section>
+<script src="/javascript/delete.js"></script>
 
 
