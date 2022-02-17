@@ -24,6 +24,9 @@ async function signupFormHander(event) {
         } else {
             alert(response.statusText)
         }
+    } else {
+        const errorDiv = document.querySelector('#error-div');
+        errorDiv.textContent = 'Please put a username, email and password'
     }
 }
 
