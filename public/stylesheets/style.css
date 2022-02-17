@@ -80,13 +80,25 @@ a.navbar-item:hover {
     text-align: center;
 }
 
+
 .modal-background {
     background-color: rgba(10,10,10,.95);
 }
 
+.mobile-view {
+    display: none;
+}
 
 @media screen and (max-width: 500px) {
     .navbar {
         margin-left: 0px;
     }
 }
+ @media screen and (max-width: 768px) {             
+     .hidden-mobile {
+         display: none;
+     }
+     .mobile-view {
+         display: block;
+     }
+ }

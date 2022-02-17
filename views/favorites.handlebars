@@ -2,19 +2,19 @@
     {{#if chords.length}}
     <div class="columns is-mobile ml-4 mt-6">
             <div class="save-title column is-one-quarter">
-                <h1 class="is-size-4">Progression Name</h1>
+                <h1 class="is-size-4 hidden-mobile center">Progression Name</h1>
             </div>
             <div class="save-chords column is-half">
-                <h2 class="is-size-4">Chord Progression</h2>
+                <h2 class="is-size-4 hidden-mobile center">Chord Progression</h2>
             </div>
     </div>
     {{#each chords as |chord|}}
-    <div class="columns is-mobile ml-4 mt-1">
+    <div class="columns ml-4 mt-1">
             <div class="save-title column ml-4 is-one-quarter">
-                <h2 class="is-size-5 has-text-weight-semibold">{{chord.progression_name}}</h1>
+                <h2 class="is-size-5 has-text-weight-semibold has-text-success center">{{chord.progression_name}}</h1>
             </div>
             <div class="save-chords column is-half">
-                <h3 class="has-text-weight-semibold is-size-5">{{chord.chords}}</h3>
+                <h3 class="has-text-weight-semibold is-size-5 center">{{chord.chords}}</h3>
                 {{!-- <h3> {{#each chord.chords as |singleChord|}}<span class="alt-font mr-5">{{singleChord}}</span>{{/each}} </h2> --}}
             </div>
             <div class="edit-favorites column is-one-quarter">
