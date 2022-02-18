@@ -27,6 +27,7 @@
   - [mysql2](https://www.npmjs.com/package/mysql2)
   - [sequelize](https://sequelize.org/)
   - [tonaljs](https://github.com/tonaljs/tonal)  
+  - [tonejs](https://tonejs.github.io/)  
 
   ## Usage
   Press the button to create a random chord progression, or sign up to choose what key and how many chords you'd like in the progression. Users can optionally save the progression for future reference.  
