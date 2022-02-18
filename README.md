@@ -1,9 +1,11 @@
 # Song Starter 3000
   ![license](https://img.shields.io/badge/license-MIT-orange.svg)
 
+  ![song-starter-screenshot](assets/images/song-starter-hero.gif)
+
   ## Description
-  This application is a song writing tool that creates chord progressions. Users can log in to choose what key they want to use, and how long the progression should be. Users can also save progressions and add them to favorites. Non-users can still create random progressions without having to sign in. 
-![song-starter-screenshot](assets/images/song-starter-hero.gif)
+  This application is a song writing tool that creates chord progressions, will play samples of the chords, and allows users to save their favorite progressions. 
+
   ## Table of Contents
   * [Deployment](#deployment)
   * [Technologies](#technologies)
@@ -30,7 +32,7 @@
   - [tonejs](https://tonejs.github.io/)  
 
   ## Usage
-  Press the button to create a random chord progression, or sign up to choose what key and how many chords you'd like in the progression. Users can optionally save the progression for future reference.  
+  Press the button to create a random chord progression, then click on the chords to hear how they sound. Or sign up to choose what key and how many chords you'd like in the progression. Users can optionally save the progression for future reference.  
   ![song-starter-demo](assets/images/song-starter-demo.gif) 
   ## Tests
   [Jest](https://jestjs.io/) was used for testing.  
@@ -43,7 +45,6 @@
 Some features we'd like to add in the future:
  - More chord variety (sus chords, chord extensions, etc.)
  - Piano and guitar diagrams to demonstrate how to play chords
- - sound clips to play the chords
  - ability to create midi files from the chord progressions
  - option to randomly select a tempo
   ## License

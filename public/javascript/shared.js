@@ -50,15 +50,14 @@ export function displayProgression(chords, chordNumber) {
 function playSound() {
   const playChord = this.getAttribute('value');
   const chordNotes = Tonal.Chord.get(playChord).notes;
-  console.log(`chord notes: ${chordNotes}`);
-
+  
   chordNotes.forEach(note => {
-    const synth = new Tone.Synth().toDestination();
+    const synth = new Tone.AMSynth().toDestination();
     const now = Tone.now()
     // trigger the attack immediately
-    synth.triggerAttack(`${note}4, now`)
+    synth.triggerAttack(`${note}3, now`)
     // wait one second before triggering the release
     synth.triggerRelease(now + 1)
   })
-}
+};
 
