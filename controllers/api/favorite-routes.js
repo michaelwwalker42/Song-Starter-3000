@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { Router } = require('express');
 const { Progression } = require('../../models');
 const withAuth = require('../../utils/auth');
 
@@ -59,6 +60,22 @@ router.put('/:id', withAuth, (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
+});
+
+// delete saved progression
+router.delete('/:id', withAuth, (req, res) => {
+  Progression.destroy({
+    where:{
+      id: req.params.id
+    }
+  })
+  .then(() => {
+    res.send({ message: 'Progression Deleted'})
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err)
+  });
 })
 
 module.exports = router;
